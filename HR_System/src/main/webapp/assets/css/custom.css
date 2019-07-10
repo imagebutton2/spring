@@ -1,0 +1,208 @@
+.sidebar-wrapper,
+.sidebar-wrapper .sidebar-dropdown > a:after,
+.sidebar-wrapper ul li a i,
+.page-wrapper .page-content {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----------------page-wrapper----------------*/
+.page-wrapper{
+    height: 100vh;
+}
+
+/*----------------toggeled sidebar----------------*/
+.page-wrapper.toggled .sidebar-wrapper{
+    left:0px;
+}
+@media screen and (min-width: 768px) {
+    .page-wrapper.toggled .page-content{
+        padding-left: 220px;
+    }
+}
+
+.page-wrapper.toggled #toggle-sidebar{
+    position: absolute;
+    color: #cacaca;
+}
+
+/* 左侧导航栏 */
+.sidebar-wrapper{
+    width: 220px;
+    background: #0E3050;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: -300px;
+}
+
+
+
+.sidebar-wrapper ul li:hover a i,
+.sidebar-wrapper .sidebar-dropdown .sidebar-submenu li a:hover:before,
+.sidebar-wrapper .sidebar-search input.search-menu:focus + span{
+    color: #0086fd;
+}
+
+.sidebar-wrapper ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-wrapper a{
+    text-decoration: none;
+} 
+/* 内容部分 */
+.sidebar-content{
+    max-height: calc(100% - 30px);
+    height: calc(100% - 30px);
+    overflow-y: scroll;
+    position: relative;
+    
+}
+.sidebar-content.desktop{
+    overflow-y: hidden;
+}
+
+
+/* 侧边导航栏部分 */
+.sidebar-wrapper .sidebar-menu{
+    border-top: 1px solid #222b35;   
+    padding: 60px 0 10px;
+}
+
+.sidebar-wrapper .sidebar-menu ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    line-height: 45px;
+    color: #ccc;
+    text-decoration: none;
+    transition:color .3s;
+    position: relative;
+    padding: 5px 30px 5px 20px;
+}
+
+.sidebar-wrapper .sidebar-menu ul li:hover > a{
+    color: #fff;
+}
+
+.sidebar-wrapper .sidebar-menu  ul li a i{
+    margin-right: 10px;
+    font-size: 14px;
+    background: #0c1119;
+    width: 30px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown div {
+    background: #0E3050;
+    border-bottom: 1px solid #222b35;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        background: 0 0;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        right: 15px;
+        top: 7px;
+
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul {
+        padding: 5px 0;
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
+        padding-left: 25px;
+        font-size: 13px;
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
+        content: "\f10c";
+        font-family: FontAwesome;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin-right:10px;
+        font-size: 10px;
+
+
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .badge,
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .label{
+    float: right;    
+     margin-top: 0px;
+}
+
+.sidebar-wrapper .sidebar-menu .badge{
+    background: #384558;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-submenu{
+    display: none;
+}
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a:after{
+    transform:rotate(90deg);
+    right: 17px;
+}
+
+
+/*--------------------------page-content-----------------------------*/
+.page-wrapper .page-content{
+    display: inline-block;
+    width: 100%;
+    padding-left: 0px;
+}
+.page-wrapper .page-content > div {
+    padding: 20px 40px;
+}
+.page-wrapper .page-content {
+    overflow-x: hidden;
+}
+/*---------------------toggle-sidebar button-------------------------*/
+#toggle-sidebar{
+    position: fixed;
+    top: 13px;
+    left: 25px;
+    /* color: #0f151f; */
+    color: #D5D6E2;
+    font-size: 18px;
+}
+
+/*----------------  Scroll bar style   --------------- */
+
+.mCSB_scrollTools{
+    width: 6px;
+}
+.mCSB_inside>.mCSB_container{
+    margin-right: 0px; 
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+{
+    background: #657692;
+}
